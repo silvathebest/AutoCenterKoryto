@@ -5,15 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoCenterKorytoView"
         mc:Ignorable="d"
-        Title="WindowRegistration" Height="450" Width="800">
-    <Grid>
-        <Label x:Name="labelName" Content="Имя:" HorizontalAlignment="Left" Margin="48,10,0,0" VerticalAlignment="Top" FontSize="22"/>
-        <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Margin="48,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="269" FontSize="16"/>
-        <Label x:Name="labelPassword" Content="Пароль:" HorizontalAlignment="Left" Margin="48,186,0,0" VerticalAlignment="Top" FontSize="22"/>
-        <TextBox x:Name="textBoxPasswordFirst" HorizontalAlignment="Left" Height="33" Margin="48,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" FontSize="14"/>
-        <TextBox x:Name="textBoxPasswordSecond" HorizontalAlignment="Left" Height="33" Margin="48,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" FontSize="14"/>
-        <Label x:Name="labelPasswordAgain" Content="Пароль еще раз:" HorizontalAlignment="Left" Margin="48,265,0,0" VerticalAlignment="Top" FontSize="22"/>
-        <Label x:Name="labelPhoneNumber" Content="Номер телефона" HorizontalAlignment="Left" Margin="45,104,0,0" VerticalAlignment="Top" FontSize="22"/>
-        <TextBox x:Name="textBoxPhoneNumber" HorizontalAlignment="Left" Height="33" Margin="48,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" FontSize="14"/>
-    </Grid>
+        Title="WindowRegistration" Height="450" Width="376.333">
+  <Grid>
+    <Label x:Name="labelName" Content="Имя:" HorizontalAlignment="Left" Margin="48,29,0,0" VerticalAlignment="Top" FontSize="22"/>
+    <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Margin="48,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="269" FontSize="18"/>
+    <Label x:Name="labelPassword" Content="Пароль:" HorizontalAlignment="Left" Margin="48,188,0,0" VerticalAlignment="Top" FontSize="22"/>
+    <TextBox x:Name="textBoxPasswordFirst" HorizontalAlignment="Left" Margin="48,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" FontSize="18"/>
+    <TextBox x:Name="textBoxPasswordSecond" Margin="48,311,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" HorizontalAlignment="Left" Width="271"/>
+    <Label x:Name="labelPasswordAgain" Content="Пароль еще раз:" HorizontalAlignment="Left" Margin="48,267,0,0" VerticalAlignment="Top" FontSize="22"/>
+    <Label x:Name="labelPhoneNumber" Content="Номер телефона" HorizontalAlignment="Left" Margin="45,104,0,0" VerticalAlignment="Top" FontSize="22"/>
+    <TextBox x:Name="textBoxPhoneNumber" HorizontalAlignment="Left" Margin="48,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" FontSize="18"/>
+    <Button x:Name="button" Content="Зарегистрироваться" Height="33" Margin="53,355,51,0" VerticalAlignment="Top"/>
+  </Grid>
 </Window>
