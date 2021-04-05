@@ -19,9 +19,7 @@
                 <ColumnDefinition Width="0.6*"></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" Content="Комплектация" FontSize="14" Margin="10,5"></Label>
-            <ComboBox x:Name="comboBoxComplectation" Grid.Row="0" Grid.Column="1" FontSize="14" Margin="5" DisplayMemberPath="WorkName" SelectedValuePath="Id"></ComboBox>
-            <Label Grid.Row="1" Content="Тип" FontSize="14" Margin="10,5"></Label>
+           <Label Grid.Row="1" Content="Тип" FontSize="14" Margin="10,5"></Label>
             <TextBox x:Name="textBoxType" Grid.Row="1" Grid.Column="1" FontSize="14" Margin="5"></TextBox>
             <Label Grid.Row="2" Content="Название" FontSize="14" Margin="10,5"></Label>
             <TextBox x:Name="textBoxName" Grid.Row="2" Grid.Column="1" FontSize="14" Margin="5"></TextBox>

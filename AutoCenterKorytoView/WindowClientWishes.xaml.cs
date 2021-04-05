@@ -23,5 +23,25 @@ namespace AutoCenterKorytoView
         {
             InitializeComponent();
         }
+
+        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonUpd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonDel_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonRef_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
