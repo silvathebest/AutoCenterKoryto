@@ -18,15 +18,14 @@ namespace AutoCenterKorytoDatabaseImplement
         public virtual DbSet<Client> Clients { set; get; }
         public virtual DbSet<ClientWishes> ClientWishes { set; get; }
         public virtual DbSet<Color> Colors { set; get; }
-        public virtual DbSet<Complectation> Complectations{ set; get; }
+        public virtual DbSet<Complectation> Complectations { set; get; }
         public virtual DbSet<Complectation_Car> Complectation_Cars { set; get; }
         public virtual DbSet<Features> Features { set; get; }
         public virtual DbSet<PrePurchaseWorks> PrePurchaseWorks { set; get; }
         public virtual DbSet<PrePurchaseWorks_Complectation> PrePurchaseWorks_Complectations { set; get; }
-        public virtual DbSet<Purchase> Purchases{ set; get; }
-        public virtual DbSet<Purchase_Car> Purchase_Cars{ set; get; }
-        public virtual DbSet<Purchase_PrePurchaseWorks> Purchase_PrePurchaseWorks{ set; get; }
+        public virtual DbSet<Purchase> Purchases { set; get; }
+        public virtual DbSet<Purchase_Car> Purchase_Cars { set; get; }
+        public virtual DbSet<Purchase_PrePurchaseWorks> Purchase_PrePurchaseWorks { set; get; }
         public virtual DbSet<Worker> Workers { set; get; }
-
     }
 }
