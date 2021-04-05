@@ -11,7 +11,7 @@ namespace AutoCenterKorytoDatabaseImplement.Models
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
-        public int Price { get; set; }
+        public double Price { get; set; }
         public string Description { get; set; }
         public int WorkerId { get; set; }
         public virtual Worker Worker { get; set; }

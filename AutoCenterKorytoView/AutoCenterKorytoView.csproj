@@ -193,6 +193,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AutoCenterKorytoBusinessLogic\AutoCenterKorytoBusinessLogic.csproj">
+      <Project>{1784d274-5da1-430b-bb06-c8da0c4d2a02}</Project>
+      <Name>AutoCenterKorytoBusinessLogic</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AutoCenterKorytoDatabaseImplement\AutoCenterKorytoDatabaseImplement.csproj">
       <Project>{5ce775c1-de1e-4a72-84b2-0343b336d8c9}</Project>
       <Name>AutoCenterKorytoDatabaseImplement</Name>
