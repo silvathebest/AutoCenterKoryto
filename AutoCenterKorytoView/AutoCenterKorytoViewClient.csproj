@@ -152,8 +152,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="WindowClientWishe.xaml.cs">
+      <DependentUpon>WindowClientWishe.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowClientWishes.xaml.cs">
+      <DependentUpon>WindowClientWishes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowLogin.xaml.cs">
       <DependentUpon>WindowLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowPrePurchaseWork.xaml.cs">
+      <DependentUpon>WindowPrePurchaseWork.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowPrePurchaseWorks.xaml.cs">
+      <DependentUpon>WindowPrePurchaseWorks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowPurchase.xaml.cs">
+      <DependentUpon>WindowPurchase.xaml</DependentUpon>
     </Compile>
     <Compile Include="WindowRegistration.xaml.cs">
       <DependentUpon>WindowRegistration.xaml</DependentUpon>
@@ -170,9 +185,29 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="WindowClientWishe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowClientWishes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WindowLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowPrePurchaseWork.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowPrePurchaseWorks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowPurchase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="WindowRegistration.xaml">
       <SubType>Designer</SubType>
