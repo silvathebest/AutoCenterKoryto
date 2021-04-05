@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace AutoCenterKorytoWorkerView
 {
     /// <summary>
-    /// Логика взаимодействия для WindowRegistation.xaml
+    /// Логика взаимодействия для WindowComplectations.xaml
     /// </summary>
-    public partial class WindowRegistation : Window
+    public partial class WindowComplectations : Window
     {
-        public WindowRegistation()
+        public WindowComplectations()
         {
             InitializeComponent();
         }

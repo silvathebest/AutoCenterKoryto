@@ -15,19 +15,13 @@ using System.Windows.Shapes;
 namespace AutoCenterKorytoWorkerView
 {
     /// <summary>
-    /// Логика взаимодействия для WindowLogin.xaml
+    /// Логика взаимодействия для WindowColors.xaml
     /// </summary>
-    public partial class WindowLogin : Window
+    public partial class WindowColors : Window
     {
-        public WindowLogin()
+        public WindowColors()
         {
             InitializeComponent();
-        }
-
-        private void buttonRegistration_Click(object sender, RoutedEventArgs e)
-        {
-            WindowRegistration WRegistration = new WindowRegistration { Owner = this };
-            WRegistration.ShowDialog();
         }
     }
 }

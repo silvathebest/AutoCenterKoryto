@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoCenterKorytoWorkerView"
         mc:Ignorable="d"
-        Title="WindowLogin" Height="450" Width="800">
+        Title="WindowLogin" Height="450" Width="408">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="405*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas Height="419" VerticalAlignment="Top">
+            <Label x:Name="labelLogin" Content="Логин:" Canvas.Left="101" Canvas.Top="64" FontSize="22"/>
+            <TextBox x:Name="textBoxLogin" Canvas.Left="101" TextWrapping="Wrap" Canvas.Top="108" Width="191" FontSize="18"/>
+            <Label x:Name="labelPassword" Content="Пароль:" Canvas.Left="101" Canvas.Top="162" FontSize="22"/>
+            <TextBox x:Name="textBoxPassword" Canvas.Left="101" TextWrapping="Wrap" Canvas.Top="206" Width="191" FontSize="18"/>
+            <Button x:Name="buttonLogin" Content="Войти" Height="44" Canvas.Left="100" Canvas.Top="266" Width="192" Background="#00DDDDDD"/>
+            <Button x:Name="buttonRegistration" Content="Регистрация" Height="18" Canvas.Left="300" Width="86" Background="#00DDDDDD" BorderThickness="0" Click="buttonRegistration_Click"/>
+        </Canvas>
     </Grid>
 </Window>
