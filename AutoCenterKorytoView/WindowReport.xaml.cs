@@ -15,23 +15,23 @@ using System.Windows.Shapes;
 namespace AutoCenterKorytoView
 {
     /// <summary>
-    /// Логика взаимодействия для WindowClientWishe.xaml
+    /// Логика взаимодействия для WindowReport.xaml
     /// </summary>
-    public partial class WindowClientWishe : Window
+    public partial class WindowReport : Window
     {
-        public WindowClientWishe()
+        public WindowReport()
         {
             InitializeComponent();
         }
 
-        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
+        private void ButtonMake_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+
         }
 
-        private void ButtonCancel_Click(object sender, RoutedEventArgs e)
+        private void ButtonToPdf_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+
         }
     }
 }

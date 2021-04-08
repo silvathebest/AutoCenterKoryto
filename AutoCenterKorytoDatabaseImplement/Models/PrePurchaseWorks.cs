@@ -13,7 +13,7 @@ namespace AutoCenterKorytoDatabaseImplement.Models
         public string Type { get; set; }
         [Required]
         public string Name { get; set; }
-        public DateTime DeadlineDate { get; set; }
+        public string DeadlineDate { get; set; }
         public int ClientId { get; set; }
         public virtual Client Client { get; set; }
         [ForeignKey("PrePurchaseWorksId")]

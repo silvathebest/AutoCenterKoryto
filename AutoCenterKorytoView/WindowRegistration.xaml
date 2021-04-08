@@ -15,6 +15,6 @@
     <Label x:Name="labelPasswordAgain" Content="Пароль еще раз:" HorizontalAlignment="Left" Margin="48,267,0,0" VerticalAlignment="Top" FontSize="22"/>
     <Label x:Name="labelPhoneNumber" Content="Номер телефона" HorizontalAlignment="Left" Margin="45,104,0,0" VerticalAlignment="Top" FontSize="22"/>
     <TextBox x:Name="textBoxPhoneNumber" HorizontalAlignment="Left" Margin="48,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" FontSize="18"/>
-    <Button x:Name="button" Content="Зарегистрироваться" Height="33" Margin="53,355,51,0" VerticalAlignment="Top" Background="#00DDDDDD"/>
+    <Button x:Name="button" Content="Зарегистрироваться" Height="33" Margin="53,355,51,0" VerticalAlignment="Top" Background="#00DDDDDD" Click="button_Click"/>
   </Grid>
 </Window>

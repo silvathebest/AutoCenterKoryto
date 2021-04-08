@@ -23,5 +23,21 @@ namespace AutoCenterKorytoView
         {
             InitializeComponent();
         }
+
+        private void ButtonAddPrePurchaseWorks_Click(object sender, RoutedEventArgs e)
+        {
+            WindowPrePurchaseWorkSelector window = new WindowPrePurchaseWorkSelector();
+            window.ShowDialog();
+        }
+
+        private void ButtonSave_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ButtonCancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

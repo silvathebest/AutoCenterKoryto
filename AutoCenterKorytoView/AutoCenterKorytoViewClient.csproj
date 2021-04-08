@@ -158,6 +158,9 @@
     <Compile Include="WindowClientWishes.xaml.cs">
       <DependentUpon>WindowClientWishes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowComplectationList.xaml.cs">
+      <DependentUpon>WindowComplectationList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowLogin.xaml.cs">
       <DependentUpon>WindowLogin.xaml</DependentUpon>
     </Compile>
@@ -167,11 +170,20 @@
     <Compile Include="WindowPrePurchaseWorks.xaml.cs">
       <DependentUpon>WindowPrePurchaseWorks.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowPrePurchaseWorkSelector.xaml.cs">
+      <DependentUpon>WindowPrePurchaseWorkSelector.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowPurchase.xaml.cs">
       <DependentUpon>WindowPurchase.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowPurchases.xaml.cs">
+      <DependentUpon>WindowPurchases.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowRegistration.xaml.cs">
       <DependentUpon>WindowRegistration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowReport.xaml.cs">
+      <DependentUpon>WindowReport.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -193,6 +205,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="WindowComplectationList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WindowLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -205,11 +221,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WindowPurchase.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="WindowPrePurchaseWorkSelector.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowPurchase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowPurchases.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WindowRegistration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowReport.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -246,6 +274,9 @@
       <Project>{5ce775c1-de1e-4a72-84b2-0343b336d8c9}</Project>
       <Name>AutoCenterKorytoDatabaseImplement</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\mainLogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

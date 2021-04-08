@@ -5,7 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoCenterKorytoView"
         mc:Ignorable="d"
-        Title="WindowPurchase" Height="450" Width="800">
-    <Grid>
-    </Grid>
+        Title="Создание покупки" Height="296.031" Width="516.712" ResizeMode="NoResize">
+    <StackPanel Margin="0,23,0,1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.6*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="Машина" FontSize="14" Margin="10,5"/>
+            <ComboBox x:Name="comboBoxCars" Grid.Row="0" Grid.Column="1" FontSize="14" Margin="5" DisplayMemberPath="WorkName" SelectedValuePath="Id"/>
+            <Label Grid.Row="2" Content="Цена" FontSize="14" Margin="10,5"/>
+            <TextBox x:Name="textBoxPrice" Grid.Row="2" Grid.Column="1" FontSize="20" Margin="5"/>
+        </Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="501">
+            <Button x:Name="ButtonAddPrePurchaseWorks" Content="Предпродажные работы" Width="175" Margin="10" Click="ButtonAddPrePurchaseWorks_Click"/>
+            <Button x:Name="ButtonSave" Content="Сохранить" Width="80" Margin="10" Click="ButtonSave_Click"/>
+            <Button x:Name="ButtonCancel" Content="Отмена" Width="80" Margin="10" Click="ButtonCancel_Click"/>
+        </StackPanel>
+    </StackPanel>
 </Window>

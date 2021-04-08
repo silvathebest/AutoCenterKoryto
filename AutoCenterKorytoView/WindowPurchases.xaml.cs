@@ -15,24 +15,24 @@ using System.Windows.Shapes;
 namespace AutoCenterKorytoView
 {
     /// <summary>
-    /// Логика взаимодействия для WindowClientWishes.xaml
+    /// Логика взаимодействия для WindowPurchases.xaml
     /// </summary>
-    public partial class WindowClientWishes : Window
+    public partial class WindowPurchases : Window
     {
-        public WindowClientWishes()
+        public WindowPurchases()
         {
             InitializeComponent();
         }
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            WindowClientWishe window = new WindowClientWishe();
+            WindowPurchase window = new WindowPurchase();
             window.ShowDialog();
         }
 
         private void ButtonUpd_Click(object sender, RoutedEventArgs e)
         {
-            WindowClientWishe window = new WindowClientWishe();
+            WindowPurchase window = new WindowPurchase();
             window.ShowDialog();
         }
 

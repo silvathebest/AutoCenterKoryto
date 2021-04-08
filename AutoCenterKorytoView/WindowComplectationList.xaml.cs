@@ -15,23 +15,13 @@ using System.Windows.Shapes;
 namespace AutoCenterKorytoView
 {
     /// <summary>
-    /// Логика взаимодействия для WindowClientWishe.xaml
+    /// Логика взаимодействия для WindowComplectationList.xaml
     /// </summary>
-    public partial class WindowClientWishe : Window
+    public partial class WindowComplectationList : Window
     {
-        public WindowClientWishe()
+        public WindowComplectationList()
         {
             InitializeComponent();
-        }
-
-        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
-        private void ButtonCancel_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
     }
 }

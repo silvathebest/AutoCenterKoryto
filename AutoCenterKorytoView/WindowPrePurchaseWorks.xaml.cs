@@ -26,22 +26,14 @@ namespace AutoCenterKorytoView
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-
+            WindowPrePurchaseWork window = new WindowPrePurchaseWork();
+            window.ShowDialog();
         }
 
         private void ButtonUpd_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void ButtonDel_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ButtonRef_Click(object sender, RoutedEventArgs e)
-        {
-
+            WindowPrePurchaseWork window = new WindowPrePurchaseWork();
+            window.ShowDialog();
         }
     }
 }

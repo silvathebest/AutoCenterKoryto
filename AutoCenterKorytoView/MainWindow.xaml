@@ -6,7 +6,37 @@
         xmlns:local="clr-namespace:AutoCenterKorytoView"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <DockPanel LastChildFill="True">
+        <!--Меню-->
+        <Grid DockPanel.Dock="Top" Height="60">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="ButtonPurchase" Grid.Column="0" Content="Покупка" Click="ButtonPurchase_Click"/>
+            <Button x:Name="ButtonPrePurchaseWorks" Grid.Column="1" Click="ButtonPrePurchaseWorks_Click">
+                <Button.Content>
+                    <TextBlock Text="Предпродажные работы" TextWrapping="Wrap" TextAlignment="Center"/>
+                </Button.Content>
+            </Button>
+            <Button x:Name="ButtonClientWishes" Grid.Column="2" Click="ButtonClientWishes_Click">
+                <Button.Content>
+                    <TextBlock Text="Пожелания клиента" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                </Button.Content>
+            </Button>
+            <Button x:Name="ButtonComplectationList" Grid.Column="3" Content="Список Комплектаций" Click="ButtonComplectationList_Click"/>
+            <Button x:Name="ButtonReport" Grid.Column="4" Content="Отчет" Click="ButtonReport_Click"/>
+            <Button x:Name="ButtonExit" Grid.Column="5" Content="Выход" Click="ButtonExit_Click"/>
+        </Grid>
+        <Canvas HorizontalAlignment="Center" Width="450" Height="250" VerticalAlignment="Center">
+            <Image Width="450"  x:Name="logo" Source="Images/mainLogo.png"/>
+        </Canvas>
+    </DockPanel>
 </Window>

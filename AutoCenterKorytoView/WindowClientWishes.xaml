@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoCenterKorytoView"
         mc:Ignorable="d"
-        Title="WindowClientWishes" Height="450" Width="800">
+        Title="Пожелания клиента" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -17,10 +17,8 @@
         <DataGrid x:Name="dataGridSpareParts" Grid.Column="0" AutoGenerateColumns="False" CanUserAddRows="false">
             <DataGrid.Columns>
                 <DataGridTextColumn Visibility="Hidden" Binding="{Binding Path=Id}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Тип" Binding="{Binding Path=Type}" Width="0.4*"></DataGridTextColumn>
-                <DataGridTextColumn Header="Название" Binding="{Binding Path=Price}" Width="0.6*"></DataGridTextColumn>
-                <DataGridTextColumn Header="Срок выполнения" Binding="{Binding Path=DeadlineDate}" Width="0.4*"></DataGridTextColumn>
-                <DataGridTextColumn Header="Цена" Binding="{Binding Path=Price}" Width="0.2*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Заказ" Binding="{Binding Path=Type}" Width="0.2*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Примечание" Binding="{Binding Path=Price}" Width="0.6*"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Grid.Column="1" VerticalAlignment="Top">
@@ -29,6 +27,5 @@
             <Button x:Name="ButtonDel" Content="Удалить" Margin="20,20,0,20" Click="ButtonDel_Click" HorizontalAlignment="Left" Width="158"></Button>
             <Button x:Name="ButtonRef" Content="Обновить" Margin="20,20,0,20" Click="ButtonRef_Click" HorizontalAlignment="Left" Width="158"></Button>
         </StackPanel>
-        <Label x:Name="labelTotalPrice" Content="Общая цена:" Grid.Column="1" HorizontalAlignment="Left" Margin="10,245,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

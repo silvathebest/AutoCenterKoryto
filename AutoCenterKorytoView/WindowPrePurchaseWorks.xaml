@@ -5,22 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoCenterKorytoView"
         mc:Ignorable="d"
-        Title="WindowPrePurchaseWorks" Height="520" Width="500" ResizeMode="NoResize">
-    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-        <Label Content="ТО:" FontSize="14" Margin="5" HorizontalContentAlignment="Center"></Label>
-        <ComboBox x:Name="comboBoxTechnicalMaintenances" FontSize="14" Margin="5" DisplayMemberPath="TechnicalMaintenanceName" SelectedValuePath="Id" SelectionChanged="SelectionChanged"></ComboBox>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-            <StackPanel>
-                <Label Content="Текущие машины" FontSize="14" Margin="5" HorizontalContentAlignment="Center"></Label>
-                <ListBox x:Name="listBoxCurrentCars" DisplayMemberPath="CarName" SelectedValuePath="Id" Width="188" Margin="5" Height="300"></ListBox>
-            </StackPanel>
-            <Button Content="&lt;&lt;" Margin="5" Click="ButtonAdd_Click"></Button>
-            <Button Content="&gt;&gt;" Margin="5" Click="ButtonDel_Click"></Button>
-            <StackPanel>
-                <Label Content="Доступные машины" FontSize="14" Margin="5" HorizontalContentAlignment="Center"></Label>
-                <ListBox x:Name="listBoxAvailableCars" DisplayMemberPath="CarName" SelectedValuePath="Id" Width="188" Margin="5" Height="300"></ListBox>
-            </StackPanel>
+        Title="Предпродажные работы" Height="346.404" Width="635.546" ResizeMode="NoResize">
+    <Grid Height="316" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="dataGridSpareParts" Grid.Column="0" AutoGenerateColumns="False" CanUserAddRows="false" Height="316" VerticalAlignment="Top">
+            <DataGrid.Columns>
+                <DataGridTextColumn Visibility="Hidden" Binding="{Binding Path=Id}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Тип" Binding="{Binding Path=Type}" Width="0.4*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Название" Binding="{Binding Path=Price}" Width="0.6*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Срок выполнения" Binding="{Binding Path=DeadlineDate}" Width="0.4*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Цена" Binding="{Binding Path=Price}" Width="0.2*"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Grid.Column="1" VerticalAlignment="Top">
+            <Button x:Name="ButtonAdd" Content="Добавить" Margin="20,20,0,20" HorizontalAlignment="Left" Width="128" Click="ButtonAdd_Click"/>
+            <Button x:Name="ButtonUpd" Content="Изменить" Margin="20,20,0,20" HorizontalAlignment="Left" Width="128" Click="ButtonUpd_Click"/>
+            <Button x:Name="ButtonDel" Content="Удалить" Margin="20,20,0,20" HorizontalAlignment="Left" Width="128"/>
+            <Button x:Name="ButtonRef" Content="Обновить" Margin="20,20,0,20" HorizontalAlignment="Left" Width="128"/>
         </StackPanel>
-        <Button Content="Сохранить" Width="80" Margin="10" Click="ButtonSave_Click"></Button>
-    </StackPanel>
+    </Grid>
 </Window>
