@@ -29,5 +29,12 @@ namespace AutoCenterKorytoWorkerView
             WindowRegistration WRegistration = new WindowRegistration { Owner = this };
             WRegistration.ShowDialog();
         }
+
+        private void buttonLogin_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = new MainWindow();
+            mainWindow.Show();
+            Close();
+        }
     }
 }

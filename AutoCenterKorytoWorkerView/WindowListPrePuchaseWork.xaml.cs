@@ -15,23 +15,23 @@ using System.Windows.Shapes;
 namespace AutoCenterKorytoWorkerView
 {
     /// <summary>
-    /// Логика взаимодействия для WindowComplectation.xaml
+    /// Логика взаимодействия для WindowListPrePuchaseWork.xaml
     /// </summary>
-    public partial class WindowComplectation : Window
+    public partial class WindowListPrePuchaseWork : Window
     {
-        public WindowComplectation()
+        public WindowListPrePuchaseWork()
         {
             InitializeComponent();
         }
 
-        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
+        private void ButtonSaveToWord_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+
         }
 
-        private void ButtonCancel_Click(object sender, RoutedEventArgs e)
+        private void ButtonSaveToExcel_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+
         }
     }
 }

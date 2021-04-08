@@ -57,6 +57,9 @@
     <Compile Include="WindowCar.xaml.cs">
       <DependentUpon>WindowCar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowCarComplectation.xaml.cs">
+      <DependentUpon>WindowCarComplectation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowCars.xaml.cs">
       <DependentUpon>WindowCars.xaml</DependentUpon>
     </Compile>
@@ -69,6 +72,9 @@
     <Compile Include="WindowComplectation.xaml.cs">
       <DependentUpon>WindowComplectation.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowComplectationPrePurchaseWork.xaml.cs">
+      <DependentUpon>WindowComplectationPrePurchaseWork.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowComplectations.xaml.cs">
       <DependentUpon>WindowComplectations.xaml</DependentUpon>
     </Compile>
@@ -78,13 +84,23 @@
     <Compile Include="WindowFeatures.xaml.cs">
       <DependentUpon>WindowFeatures.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowListPrePuchaseWork.xaml.cs">
+      <DependentUpon>WindowListPrePuchaseWork.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowLogin.xaml.cs">
       <DependentUpon>WindowLogin.xaml</DependentUpon>
     </Compile>
     <Compile Include="WindowRegistration.xaml.cs">
       <DependentUpon>WindowRegistration.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowReportComplectation.xaml.cs">
+      <DependentUpon>WindowReportComplectation.xaml</DependentUpon>
+    </Compile>
     <Page Include="WindowCar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowCarComplectation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -101,6 +117,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WindowComplectation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowComplectationPrePurchaseWork.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -128,6 +148,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="WindowListPrePuchaseWork.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WindowLogin.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -135,6 +159,10 @@
     <Page Include="WindowRegistration.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WindowReportComplectation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -162,6 +190,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

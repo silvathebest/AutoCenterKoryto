@@ -18,7 +18,8 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Visibility="Hidden" Binding="{Binding Path=Id}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Тип" Binding="{Binding Path=Type}" Width="0.4*"></DataGridTextColumn>
-                <DataGridTextColumn Header="Название" Binding="{Binding Path=Price}" Width="0.6*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Название" Binding="{Binding Path=Name}" Width="0.6*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Машина" Binding="{Binding Path=Car}" Width="0.4*"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Grid.Column="1" VerticalAlignment="Top">

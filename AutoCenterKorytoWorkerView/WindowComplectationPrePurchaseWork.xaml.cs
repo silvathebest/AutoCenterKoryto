@@ -15,32 +15,31 @@ using System.Windows.Shapes;
 namespace AutoCenterKorytoWorkerView
 {
     /// <summary>
-    /// Логика взаимодействия для Cars.xaml
+    /// Логика взаимодействия для WindowComplectationPrePurchaseWork.xaml
     /// </summary>
-    public partial class WindowCars : Window
+    public partial class WindowComplectationPrePurchaseWork : Window
     {
-        public WindowCars()
+        public WindowComplectationPrePurchaseWork()
         {
             InitializeComponent();
         }
 
-        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
+        private void comboBoxComplecation_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            WindowCar windowCar = new WindowCar();
-            windowCar.ShowDialog();
+
         }
 
-        private void ButtonUpd_Click(object sender, RoutedEventArgs e)
+        private void ButtonSave_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
         private void ButtonDel_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ButtonRef_Click(object sender, RoutedEventArgs e)
         {
 
         }

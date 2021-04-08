@@ -24,5 +24,42 @@ namespace AutoCenterKorytoWorkerView
         {
             InitializeComponent();
         }
+
+        private void ButtonCar_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new WindowCars();
+            window.ShowDialog();
+        }
+
+        private void ButtonComplectation_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new WindowComplectations();
+            window.ShowDialog();
+        }
+
+        private void ButtonFeature_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new WindowFeatures();
+            window.ShowDialog();
+        }
+
+        private void ButtonListPrePuchaseWork_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new WindowListPrePuchaseWork();
+            window.ShowDialog();
+        }
+
+        private void ButtonReport_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new WindowReportComplectation();
+            window.ShowDialog();
+        }
+
+        private void ButtonExit_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new WindowLogin();
+            window.Show();
+            Close();
+        }
     }
 }

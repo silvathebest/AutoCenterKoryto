@@ -23,5 +23,37 @@ namespace AutoCenterKorytoWorkerView
         {
             InitializeComponent();
         }
+
+        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
+        {
+            WindowCarComplectation windowCarComplectation = new WindowCarComplectation();
+            windowCarComplectation.ShowDialog();
+        }
+
+
+        private void ButtonUpd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonDel_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonRef_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonCancel_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void ButtonSave_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

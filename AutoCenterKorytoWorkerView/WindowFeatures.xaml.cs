@@ -26,7 +26,8 @@ namespace AutoCenterKorytoWorkerView
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-
+            WindowFeature windowFeature = new WindowFeature();
+            windowFeature.ShowDialog();
         }
 
         private void ButtonUpd_Click(object sender, RoutedEventArgs e)

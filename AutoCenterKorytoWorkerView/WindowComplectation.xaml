@@ -17,12 +17,12 @@
                 <ColumnDefinition Width="0.6*"></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="1" Content="Название" FontSize="14" Margin="10,5"></Label>
-            <TextBox x:Name="textBoxName" Grid.Row="2" Grid.Column="1" FontSize="14" Margin="5"></TextBox>
-            <Label Grid.Row="2" Content="Цена" FontSize="14" Margin="10,5"></Label>
-            <TextBox x:Name="textBoxPrice" Grid.Row="3" Grid.Column="1" FontSize="14" Margin="5"></TextBox>
             <Label Grid.Row="0" Content="Описание" FontSize="14" Margin="10,5"></Label>
-            <TextBox x:Name="textBoxDescription" Grid.Row="1" Grid.Column="1" FontSize="14" Margin="5"></TextBox>
+            <TextBox x:Name="textBoxDescription" Grid.Row="0" Grid.Column="1" FontSize="14" Margin="5"></TextBox>
+            <Label Grid.Row="1" Content="Название" FontSize="14" Margin="10,5"></Label>
+            <TextBox x:Name="textBoxName" Grid.Row="1" Grid.Column="1" FontSize="14" Margin="5"></TextBox>
+            <Label Grid.Row="2" Content="Цена" FontSize="14" Margin="10,5"></Label>
+            <TextBox x:Name="textBoxPrice" Grid.Row="2" Grid.Column="1" FontSize="14" Margin="5"></TextBox>
         </Grid>
         <StackPanel Orientation="Horizontal" Margin="244,0,0,0">
             <Button x:Name="ButtonAdd" Content="Сохранить" Width="80" Margin="10" Click="ButtonAdd_Click"/>

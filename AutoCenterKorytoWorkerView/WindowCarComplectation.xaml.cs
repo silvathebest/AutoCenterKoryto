@@ -15,34 +15,23 @@ using System.Windows.Shapes;
 namespace AutoCenterKorytoWorkerView
 {
     /// <summary>
-    /// Логика взаимодействия для Cars.xaml
+    /// Логика взаимодействия для WindowCarComplectation.xaml
     /// </summary>
-    public partial class WindowCars : Window
+    public partial class WindowCarComplectation : Window
     {
-        public WindowCars()
+        public WindowCarComplectation()
         {
             InitializeComponent();
         }
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            WindowCar windowCar = new WindowCar();
-            windowCar.ShowDialog();
+            Close();
         }
 
-        private void ButtonUpd_Click(object sender, RoutedEventArgs e)
+        private void ButtonCancel_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void ButtonDel_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ButtonRef_Click(object sender, RoutedEventArgs e)
-        {
-
+            Close();
         }
     }
 }

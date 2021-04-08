@@ -5,37 +5,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoCenterKorytoWorkerView"
         mc:Ignorable="d"
-        Title="Создание машины" Height="300" Width="500">
-    <StackPanel VerticalAlignment="Bottom" Height="270" Margin="-4,0,4,1">
+        Title="Создание машины" Height="450" Width="600">
+    <StackPanel VerticalAlignment="Center">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" Content="Комплектация" FontSize="14" Margin="10,5"></Label>
-            <ComboBox x:Name="comboBoxComplectation" Grid.Row="0" Grid.Column="1" FontSize="14" Margin="5" DisplayMemberPath="ComplectationName" SelectedValuePath="Id"></ComboBox>
-            <Label Grid.Row="1" Content="Особенность" FontSize="14" Margin="10,5"></Label>
-            <ComboBox x:Name="comboBoxFeature" Grid.Row="1" Grid.Column="1" FontSize="14" Margin="5" DisplayMemberPath="FeatureName" SelectedValuePath="Id"></ComboBox>
-            <Label Grid.Row="2" Content="Цвета" FontSize="14" Margin="10,5"></Label>
-            <ComboBox x:Name="comboBoxColor" Grid.Row="2" Grid.Column="1" FontSize="14" Margin="5" DisplayMemberPath="ColorName" SelectedValuePath="Id"></ComboBox>
-            <Label Grid.Row="3" Content="Модель" FontSize="14" Margin="10,5"></Label>
-            <TextBox x:Name="textBoxModel" Grid.Row="3" Grid.Column="1" FontSize="14" Margin="5"></TextBox>
-            <Label Grid.Row="4" Content="Год выпуска" FontSize="14" Margin="10,5"></Label>
-            <TextBox x:Name="textBoxYearCreate" Grid.Row="4" Grid.Column="1" FontSize="14" Margin="5"></TextBox>
-            <Label Grid.Row="5" Content="Цена" FontSize="14" Margin="10,5"></Label>
-            <TextBox x:Name="textBoxPrice" Grid.Row="5" Grid.Column="1" FontSize="14" Margin="5"></TextBox>
+            <Label Grid.Row="0" Grid.Column="0" Content="Модель" FontSize="14" Margin="10,5" HorizontalContentAlignment="Center"></Label>
+            <TextBox x:Name="textBoxName" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" FontSize="14" Margin="5"></TextBox>
+            <Label Grid.Row="1" Grid.Column="0" Content="Год выпуска:" FontSize="14" Margin="10,5" HorizontalContentAlignment="Center"></Label>
+            <TextBox x:Name="labelYearCreate" Grid.Row="1" Grid.Column="1" FontSize="14" Margin="5" HorizontalContentAlignment="Center"></TextBox>
+            <Label Grid.Row="1" Grid.Column="2" Content="Цена:" FontSize="14" Margin="10,5" HorizontalContentAlignment="Center"></Label>
+            <TextBox x:Name="textBoxPrice" Grid.Row="1" Grid.Column="3" FontSize="14" Margin="5"></TextBox>
         </Grid>
-        <StackPanel Orientation="Horizontal" Margin="244,0,0,0">
-            <Button x:Name="ButtonAdd" Content="Сохранить" Width="80" Margin="10" Click="ButtonAdd_Click"/>
-            <Button x:Name="ButtonCancel" Content="Отмена" Width="80" Margin="10" Click="ButtonCancel_Click"/>
+        <GroupBox Header="Комплектации" Margin="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <DataGrid x:Name="dataGridWork" Grid.Column="0" AutoGenerateColumns="False" CanUserAddRows="false">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Visibility="Hidden" Binding="{Binding Path=Id}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Название" Binding="{Binding Path=ComplectationName}" Width="0.75*"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Цена" Binding="{Binding Path=Price}" Width="0.25*"></DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <StackPanel Grid.Column="1" VerticalAlignment="Top">
+                    <Button Content="Добавить" Margin="20" Click="ButtonAdd_Click"></Button>
+                    <Button Content="Изменить" Margin="20" Click="ButtonUpd_Click"></Button>
+                    <Button Content="Удалить" Margin="20" Click="ButtonDel_Click"></Button>
+                    <Button Content="Обновить" Margin="20" Click="ButtonRef_Click"></Button>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Сохранить" Width="80" Margin="10" Click="ButtonSave_Click"></Button>
+            <Button Content="Отмена" Width="80" Margin="10" Click="ButtonCancel_Click"></Button>
         </StackPanel>
     </StackPanel>
 </Window>

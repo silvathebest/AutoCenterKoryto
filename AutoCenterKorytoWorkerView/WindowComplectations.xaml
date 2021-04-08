@@ -27,6 +27,11 @@
             <Button x:Name="ButtonUpd" Content="Изменить" Margin="20,20,0,20" Click="ButtonUpd_Click" HorizontalAlignment="Left" Width="158"></Button>
             <Button x:Name="ButtonDel" Content="Удалить" Margin="20,20,0,20" Click="ButtonDel_Click" HorizontalAlignment="Left" Width="158"></Button>
             <Button x:Name="ButtonRef" Content="Обновить" Margin="20,20,0,20" Click="ButtonRef_Click" HorizontalAlignment="Left" Width="158"></Button>
+            <Button x:Name="ButtonPrePurchaseWorkBinding" Margin="20,20,0,20" Click="ButtonPrePurchaseWorkBinding_Click" HorizontalAlignment="Left" Width="158">
+                <Button.Content>
+                    <TextBlock Text="Привязка предпродажных работ" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                </Button.Content>
+            </Button>
         </StackPanel>
     </Grid>
 </Window>

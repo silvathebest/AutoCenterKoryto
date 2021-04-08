@@ -26,12 +26,12 @@ namespace AutoCenterKorytoWorkerView
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-
+            Close();
         }
 
         private void ButtonCancel_Click(object sender, RoutedEventArgs e)
         {
-
+            Close();
         }
     }
 }

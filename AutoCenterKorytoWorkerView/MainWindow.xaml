@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoCenterKorytoWorkerView"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Автоцентр Корыто" Height="450" Width="800">
+    <DockPanel>
+        <Grid DockPanel.Dock="Top" Height="40">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="Машины" Click="ButtonCar_Click"/>
+            <Button Grid.Column="1" Content="Комлектации" Click="ButtonComplectation_Click"/>
+            <Button Grid.Column="2" Content="Особенности" Click="ButtonFeature_Click"/>
+            <Button Grid.Column="3" Click="ButtonListPrePuchaseWork_Click">
+                <Button.Content>
+                    <TextBlock Text="Список предпродажных работ" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                </Button.Content>
+            </Button>
+            <Button Grid.Column="4" Content="Отчет" Click="ButtonReport_Click"/>
+            <Button Grid.Column="5" Content="Выход" Click="ButtonExit_Click"/>
+        </Grid>
+        <Canvas HorizontalAlignment="Center" Width="450" Height="250" VerticalAlignment="Center">
+            <Image Width="450" x:Name="logo" Source="Images/mainLogo.png"/>
+        </Canvas>
+    </DockPanel>
 </Window>

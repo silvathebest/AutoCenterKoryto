@@ -18,8 +18,9 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Visibility="Hidden" Binding="{Binding Path=Id}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Модель" Binding="{Binding Path=Model}" Width="0.4*"></DataGridTextColumn>
-                <DataGridTextColumn Header="Год выпуска" Binding="{Binding Path=YearCreation}" Width="0.2*"></DataGridTextColumn>
-                <DataGridTextColumn Header="Цена" Binding="{Binding Path=Price}" Width="0.2*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Год выпуска" Binding="{Binding Path=YearCreation}" Width="0.12*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Комплектация" Binding="{Binding Path=Price}" Width="0.2*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Цена" Binding="{Binding Path=Price}" Width="0.15*"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Grid.Column="1" VerticalAlignment="Top">
