@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Implements\" />
+    <ProjectReference Include="..\AutoCenterKorytoBusinessLogic\AutoCenterKorytoBusinessLogic.csproj" />
   </ItemGroup>
 
 </Project>
