@@ -31,7 +31,7 @@
             <Button Grid.Column="5" Content="Выход" Click="ButtonExit_Click"/>
         </Grid>
         <Canvas HorizontalAlignment="Center" Width="450" Height="250" VerticalAlignment="Center">
-            <Image Width="450" x:Name="logo" Source="Images/mainLogo.png"/>
+            <Image Width="450" x:Name="logo" Source="Images/Logo.png"/>
         </Canvas>
     </DockPanel>
 </Window>
