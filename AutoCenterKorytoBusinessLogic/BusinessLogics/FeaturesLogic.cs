@@ -56,7 +56,7 @@ namespace AutoCenterKorytoBusinessLogic.BusinessLogics
             });
             if (feature == null)
             {
-                throw new Exception("Комплектация не найдена");
+                throw new Exception("Особенность не найдена");
             }
             _featuresStorage.Delete(model);
         }

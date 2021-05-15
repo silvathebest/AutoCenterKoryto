@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Unity;
 
 namespace AutoCenterKorytoWorkerView
 {
@@ -20,6 +21,8 @@ namespace AutoCenterKorytoWorkerView
     /// </summary>
     public partial class MainWindow : Window
     {
+        [Dependency]
+        public IUnityContainer Container { get; set; }
         public MainWindow()
         {
             InitializeComponent();
@@ -57,7 +60,7 @@ namespace AutoCenterKorytoWorkerView
 
         private void ButtonExit_Click(object sender, RoutedEventArgs e)
         {
-            var window = new WindowLogin();
+            var window = Container.Resolve<WindowLogin>();
             window.Show();
             Close();
         }
