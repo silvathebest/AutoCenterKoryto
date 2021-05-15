@@ -1,16 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
+using Unity;
 
 namespace AutoCenterKorytoWorkerView
 {
@@ -19,6 +8,8 @@ namespace AutoCenterKorytoWorkerView
     /// </summary>
     public partial class WindowCars : Window
     {
+        [Dependency]
+        public IUnityContainer Container { get; set; }
         public WindowCars()
         {
             InitializeComponent();
@@ -26,7 +17,7 @@ namespace AutoCenterKorytoWorkerView
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            WindowCar windowCar = new WindowCar();
+            WindowCar windowCar = Container.Resolve<WindowCar>();
             windowCar.ShowDialog();
         }
 

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Unity;
 
 namespace AutoCenterKorytoWorkerView
 {
@@ -19,6 +20,8 @@ namespace AutoCenterKorytoWorkerView
     /// </summary>
     public partial class WindowReportComplectation : Window
     {
+        [Dependency]
+        public IUnityContainer Container { get; set; }
         public WindowReportComplectation()
         {
             InitializeComponent();

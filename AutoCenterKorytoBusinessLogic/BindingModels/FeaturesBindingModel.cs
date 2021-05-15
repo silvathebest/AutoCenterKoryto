@@ -8,7 +8,7 @@ namespace AutoCenterKorytoBusinessLogic.BindingModels
     {
         public int? Id { get; set; }
         public int Type { get; set; }
-        public string Name { get; set; }
-        public int WorkerId { get; set; }
+        public string Description { get; set; }
+        public int? WorkerId { get; set; }
     }
 }

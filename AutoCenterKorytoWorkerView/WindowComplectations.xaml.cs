@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Unity;
 
 namespace AutoCenterKorytoWorkerView
 {
@@ -19,6 +20,8 @@ namespace AutoCenterKorytoWorkerView
     /// </summary>
     public partial class WindowComplectations : Window
     {
+        [Dependency]
+        public IUnityContainer Container { get; set; }
         public WindowComplectations()
         {
             InitializeComponent();
@@ -26,13 +29,13 @@ namespace AutoCenterKorytoWorkerView
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            WindowComplectation windowComplectation = new WindowComplectation();
+            WindowComplectation windowComplectation = Container.Resolve<WindowComplectation>();
             windowComplectation.ShowDialog();
         }
 
         private void ButtonUpd_Click(object sender, RoutedEventArgs e)
         {
-            WindowComplectation windowComplectation = new WindowComplectation();
+            WindowComplectation windowComplectation = Container.Resolve<WindowComplectation>();
             windowComplectation.ShowDialog();
         }
 
@@ -48,7 +51,7 @@ namespace AutoCenterKorytoWorkerView
 
         private void ButtonPrePurchaseWorkBinding_Click(object sender, RoutedEventArgs e)
         {
-            WindowComplectationPrePurchaseWork windowComplectationPrePurchaseWork = new WindowComplectationPrePurchaseWork();
+            var windowComplectationPrePurchaseWork = Container.Resolve<WindowComplectationPrePurchaseWork>();
             windowComplectationPrePurchaseWork.ShowDialog();
         }
     }

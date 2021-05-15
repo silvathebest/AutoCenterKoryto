@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Unity;
 
 namespace AutoCenterKorytoWorkerView
 {
@@ -19,6 +20,8 @@ namespace AutoCenterKorytoWorkerView
     /// </summary>
     public partial class WindowFeatures : Window
     {
+        [Dependency]
+        public IUnityContainer Container { get; set; }
         public WindowFeatures()
         {
             InitializeComponent();
@@ -26,7 +29,7 @@ namespace AutoCenterKorytoWorkerView
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            WindowFeature windowFeature = new WindowFeature();
+            WindowFeature windowFeature = Container.Resolve<WindowFeature>();
             windowFeature.ShowDialog();
         }
 

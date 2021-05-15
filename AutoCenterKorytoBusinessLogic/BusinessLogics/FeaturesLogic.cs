@@ -31,7 +31,7 @@ namespace AutoCenterKorytoBusinessLogic.BusinessLogics
         {
             var feature = _featuresStorage.GetElement(new FeaturesBindingModel
             {
-                Name = model.Name,
+                Description = model.Description,
                 Type = model.Type,
                 WorkerId = model.WorkerId
             });
