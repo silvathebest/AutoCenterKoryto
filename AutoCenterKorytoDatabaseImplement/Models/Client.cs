@@ -8,7 +8,7 @@ namespace AutoCenterKorytoDatabaseImplement.Models
     {
         public int Id { get; set; }
         [Required]
-        public string Name { get; set; }
+        public string FIO { get; set; }
         [Required]
         public string Login { get; set; }
         [Required]

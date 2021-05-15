@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AutoCenterKorytoBusinessLogic.BindingModels;
+using AutoCenterKorytoBusinessLogic.BusinessLogics;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Unity;
 
 namespace AutoCenterKorytoView
 {
@@ -19,22 +22,67 @@ namespace AutoCenterKorytoView
     /// </summary>
     public partial class WindowLogin : Window
     {
-        public WindowLogin()
+        [Dependency]
+        public IUnityContainer Container { get; set; }
+        private readonly ClientLogic logic;
+        //private readonly Logger logger;
+        public WindowLogin(ClientLogic logic)
         {
             InitializeComponent();
+            this.logic = logic;
+            // logger = LogManager.GetCurrentClassLogger();
+        }
+        private void ButtonLogin_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
 
         private void buttonRegistration_Click(object sender, RoutedEventArgs e)
         {
-            WindowRegistration WRegistration = new WindowRegistration { Owner = this };
-            WRegistration.ShowDialog();
+            var form = Container.Resolve<WindowRegistration>();
+            form.ShowDialog();
+            //WindowRegistration WRegistration = new WindowRegistration (logic) { Owner = this };
+            //WRegistration.ShowDialog();
         }
 
-        private void buttonLogin_Click(object sender, RoutedEventArgs e)
+        private void buttonLogin_Click_1(object sender, RoutedEventArgs e)
         {
-            MainWindow mw = new MainWindow();
-            mw.Show();
-            this.Close();
+            if (string.IsNullOrEmpty(textBoxLogin.Text))
+            {
+                MessageBox.Show("Введите почту", "Ошибка", MessageBoxButton.OK,
+               MessageBoxImage.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(passwordBox.Password))
+            {
+                MessageBox.Show("Введите пароль", "Ошибка", MessageBoxButton.OK,
+               MessageBoxImage.Error);
+                return;
+            }
+            try
+            {
+                var users = logic.Read(new ClientBindingModel
+                {
+                    Login = textBoxLogin.Text,
+                    Password = passwordBox.Password
+                });
+                if (users != null && users.Count > 0)
+                {
+                    var MainWindow = Container.Resolve<MainWindow>();
+                    MainWindow.Show();
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Неверно введен пароль или логин", "Ошибка", MessageBoxButton.OK,
+                   MessageBoxImage.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                //logger.Error("Ошибка загрузки данных : " + ex.Message);
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }
