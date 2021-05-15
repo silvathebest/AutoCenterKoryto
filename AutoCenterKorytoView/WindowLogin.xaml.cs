@@ -32,20 +32,13 @@ namespace AutoCenterKorytoView
             this.logic = logic;
             // logger = LogManager.GetCurrentClassLogger();
         }
-        private void ButtonLogin_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
         private void buttonRegistration_Click(object sender, RoutedEventArgs e)
         {
             var form = Container.Resolve<WindowRegistration>();
             form.ShowDialog();
-            //WindowRegistration WRegistration = new WindowRegistration (logic) { Owner = this };
-            //WRegistration.ShowDialog();
         }
 
-        private void buttonLogin_Click_1(object sender, RoutedEventArgs e)
+        private void buttonLogin_Click(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(textBoxLogin.Text))
             {
