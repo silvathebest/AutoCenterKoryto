@@ -10,5 +10,7 @@ namespace AutoCenterKorytoBusinessLogic.BindingModels
         public DateTime DateCreate { get; set; } 
         public DateTime DateDelivery { get; set; }
         public int ClientId { get; set; }
+        public Dictionary<int, string> PurchaseCars { get; set; }
+        public Dictionary<int, string> Purchase_PrePurchaseWorks { get; set; }
     }
 }

@@ -29,12 +29,7 @@ namespace AutoCenterKorytoBusinessLogic.BusinessLogics
         }
         public void CreateOrUpdate(FeaturesBindingModel model)
         {
-            var feature = _featuresStorage.GetElement(new FeaturesBindingModel
-            {
-                Description = model.Description,
-                Type = model.Type,
-                WorkerId = model.WorkerId
-            });
+            var feature = _featuresStorage.GetElement(new FeaturesBindingModel { Description = model.Description });
             if (feature != null && feature.Id != model.Id)
             {
                 throw new Exception("Уже есть такая особенность");

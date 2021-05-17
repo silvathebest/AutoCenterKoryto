@@ -28,13 +28,7 @@ namespace AutoCenterKorytoBusinessLogic.BusinessLogics
         }
         public void CreateOrUpdate(ComplectationBindingModel model)
         {
-            var complectation = _complectationStorage.GetElement(new ComplectationBindingModel
-            {
-                Name = model.Name,
-                Price = model.Price,
-                Description = model.Description,
-                WorkerId = model.WorkerId
-            });
+            var complectation = _complectationStorage.GetElement(new ComplectationBindingModel { Name = model.Name });
             if (complectation != null && complectation.Id != model.Id)
             {
                 throw new Exception("Уже есть такая комплектация");

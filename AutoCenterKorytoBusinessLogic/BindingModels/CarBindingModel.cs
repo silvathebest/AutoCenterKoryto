@@ -14,5 +14,6 @@ namespace AutoCenterKorytoBusinessLogic.BindingModels
         public int WorkerId { get; set; }
         public int FeaturesId { get; set; }
         public int ColorId { get; set; }
+        public Dictionary<int, string> CarComplectations { get; set; }
     }
 }

@@ -28,15 +28,7 @@ namespace AutoCenterKorytoBusinessLogic.BusinessLogics
         }
         public void CreateOrUpdate(CarBindingModel model)
         {
-            var car = _carStorage.GetElement(new CarBindingModel
-            {
-                Model = model.Model,
-                Price = model.Price,
-                YearCreation = model.YearCreation,
-                WorkerId = model.WorkerId,
-                FeaturesId = model.FeaturesId,
-                ColorId = model.ColorId
-            });
+            var car = _carStorage.GetElement(new CarBindingModel { Model = model.Model });
             if (car != null && car.Id != model.Id)
             {
                 throw new Exception("Уже есть такая машина");
@@ -52,11 +44,11 @@ namespace AutoCenterKorytoBusinessLogic.BusinessLogics
         }
         public void Delete(CarBindingModel model)
         {
-            var purchase = _carStorage.GetElement(new CarBindingModel
+            var car = _carStorage.GetElement(new CarBindingModel
             {
                 Id = model.Id
             });
-            if (purchase == null)
+            if (car == null)
             {
                 throw new Exception("Машина не найдена");
             }
