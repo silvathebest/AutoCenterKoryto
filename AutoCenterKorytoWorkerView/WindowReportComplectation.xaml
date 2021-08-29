@@ -16,10 +16,10 @@
             </DatePicker>
             <Button Content="Сформировать" Width="100" Margin="20" Click="ButtonMake_Click"></Button>
             <Button Content="в PDF" Width="100" Margin="20" Click="ButtonToPdf_Click"></Button>
-            <Button Content="На почту" Width="100" Margin="20" Click="Button_Click"></Button>
+            <Button Content="На почту" Width="100" Margin="20" Click="ButtonToEmail_Click"></Button>
         </StackPanel>
         <Grid>
-            <DataGrid x:Name="dataGridReport" AutoGenerateColumns="True" CanUserReorderColumns="False" >
+            <DataGrid x:Name="dataGridReport" AutoGenerateColumns="False" CanUserReorderColumns="False" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Комплектация" Binding="{Binding Path=ComplectationName}" Width="*"/>
                     <DataGridTextColumn Header="Описание" Binding="{Binding Path=ComplectationDescription}" Width="*"/>
