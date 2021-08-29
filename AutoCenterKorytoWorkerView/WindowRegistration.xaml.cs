@@ -31,7 +31,6 @@ namespace AutoCenterKorytoWorkerView
         {
             InitializeComponent();
             this.logic = logic;
-            //  logger = LogManager.GetCurrentClassLogger();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -56,6 +55,11 @@ namespace AutoCenterKorytoWorkerView
                 MessageBox.Show("Заполните поле \"пароль\"", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
+            if(textBoxPassword.Text.Length > 16 || textBoxPassword.Text.Length < 6)
+            {
+                MessageBox.Show("Пароль должен содержать от 6 до 16 символов", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
             if (string.IsNullOrEmpty(textBoxCompany.Text))
             {
                 MessageBox.Show("Заполните поле \"компания\"", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -76,7 +80,6 @@ namespace AutoCenterKorytoWorkerView
             }
             catch (Exception ex)
             {
-                //logger.Error("Ошибка сохранения данных : " + ex.Message);
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }

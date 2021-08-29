@@ -23,6 +23,7 @@ namespace AutoCenterKorytoWorkerView
         {
             WindowCar windowCar = Container.Resolve<WindowCar>();
             windowCar.ShowDialog();
+            LoadData();
         }
 
         private void ButtonUpd_Click(object sender, RoutedEventArgs e)
@@ -32,6 +33,7 @@ namespace AutoCenterKorytoWorkerView
                 WindowCar windowCar = Container.Resolve<WindowCar>();
                 windowCar.Car = (CarViewModel)dataGridCars.SelectedItem;
                 windowCar.ShowDialog();
+                LoadData();
             }
         }
 
@@ -42,6 +44,7 @@ namespace AutoCenterKorytoWorkerView
                 if (dataGridCars.SelectedItems.Count == 1)
                 {
                     _carLogic.Delete(new CarBindingModel { Id = ((CarViewModel)dataGridCars.SelectedItem).Id, WorkerId = App.Worker.Id });
+                    LoadData();
                 }
                 MessageBox.Show("Успешно удалено", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
             }

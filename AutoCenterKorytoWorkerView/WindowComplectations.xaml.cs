@@ -24,6 +24,7 @@ namespace AutoCenterKorytoWorkerView
         {
             WindowComplectation windowComplectation = Container.Resolve<WindowComplectation>();
             windowComplectation.ShowDialog();
+            LoadData();
         }
 
         private void ButtonUpd_Click(object sender, RoutedEventArgs e)
@@ -31,6 +32,7 @@ namespace AutoCenterKorytoWorkerView
             WindowComplectation windowComplectation = Container.Resolve<WindowComplectation>();
             windowComplectation.Complectation = (ComplectationViewModel)dataGridComplectations.SelectedItem;
             windowComplectation.ShowDialog();
+            LoadData();
         }
 
         private void ButtonDel_Click(object sender, RoutedEventArgs e)
@@ -40,6 +42,7 @@ namespace AutoCenterKorytoWorkerView
                 if (dataGridComplectations.SelectedItems.Count == 1)
                 {
                     _complectationLogic.Delete(new ComplectationBindingModel { Id = ((ComplectationViewModel)dataGridComplectations.SelectedItem).Id, WorkerId = App.Worker.Id });
+                    LoadData();
                 }
                 MessageBox.Show("Успешно удалено", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
             }
