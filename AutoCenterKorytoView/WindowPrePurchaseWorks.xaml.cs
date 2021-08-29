@@ -52,7 +52,7 @@ namespace AutoCenterKorytoView
             {
                 if (dataGridPrePurchaseWorks.SelectedItems.Count == 1)
                 {
-                    _prePurchaseWorkLogic.Delete(new PrePurchaseWorkBindingModel { Id = ((PurchaseViewModel)dataGridPrePurchaseWorks.SelectedItem).Id, ClientId = App.Client.Id });
+                    _prePurchaseWorkLogic.Delete(new PrePurchaseWorkBindingModel { Id = ((PrePurchaseWorkViewModel)dataGridPrePurchaseWorks.SelectedItem).Id, ClientId = App.Client.Id });
                 }
                 MessageBox.Show("Успешно удалено", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
             }
