@@ -2,18 +2,7 @@
 using AutoCenterKorytoBusinessLogic.BusinessLogics;
 using AutoCenterKorytoBusinessLogic.ViewModels;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using Unity;
 
 namespace AutoCenterKorytoView
@@ -52,7 +41,7 @@ namespace AutoCenterKorytoView
             {
                 if (dataGridPrePurchaseWorks.SelectedItems.Count == 1)
                 {
-                    _prePurchaseWorkLogic.Delete(new PrePurchaseWorkBindingModel { Id = ((PurchaseViewModel)dataGridPrePurchaseWorks.SelectedItem).Id, ClientId = App.Client.Id });
+                    _prePurchaseWorkLogic.Delete(new PrePurchaseWorkBindingModel { Id = ((PrePurchaseWorkViewModel)dataGridPrePurchaseWorks.SelectedItem).Id, ClientId = App.Client.Id });
                 }
                 MessageBox.Show("Успешно удалено", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
             }

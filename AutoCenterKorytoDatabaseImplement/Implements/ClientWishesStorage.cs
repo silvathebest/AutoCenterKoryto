@@ -97,7 +97,6 @@ namespace AutoCenterKorytoDatabaseImplement.Implements
                 Id = wish.Id,
                 ClientId = wish.ClientId,
                 Note = wish.Name,
-                TotalPrice = wish.Price,
                 PrePurchaseWorkId = wish.PrePurchaseWorksId,
                 PrePurchaseWorkName = wish.PrePurchaseWorks.Name
             };
@@ -107,7 +106,6 @@ namespace AutoCenterKorytoDatabaseImplement.Implements
         {
             wish.Name = model.Note;
             wish.PrePurchaseWorksId = model.PrePurchaseWorkId;
-            wish.Price = model.TotalPrice;
             wish.ClientId = model.ClientId;
             return wish;
         }

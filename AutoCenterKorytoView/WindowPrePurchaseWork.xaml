@@ -23,7 +23,8 @@
             <TextBox x:Name="textBoxType" Grid.Row="1" Grid.Column="1" FontSize="14" Margin="5"></TextBox>
             <Label Grid.Row="2" Content="Название" FontSize="14" Margin="10,5"></Label>
             <TextBox x:Name="textBoxName" Grid.Row="2" Grid.Column="1" FontSize="14" Margin="5"></TextBox>
-           
+            <Label Grid.Row="3" Content="Цена" FontSize="14" Margin="10,5"></Label>
+            <TextBox x:Name="textBoxPrice" Grid.Row="3" Grid.Column="1" FontSize="14" Margin="5"></TextBox>
             <Label Grid.Row="4" Content="Срок выполнения" FontSize="14" Margin="10,5"></Label>
             <TextBox x:Name="textBoxDeadlineTime" Grid.Row="4" Grid.Column="1" FontSize="14" Margin="5"></TextBox>
         </Grid>

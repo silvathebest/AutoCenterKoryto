@@ -10,7 +10,7 @@ namespace AutoCenterKorytoBusinessLogic.BindingModels
         public string Type { get; set; }
         public string Name { get; set; }
         public string DeadlineTime { get; set; }
-        //public double Price { get; set; } // Нет в бд
+        public double Price { get; set; } 
         public int ClientId { get; set; }
     }
 }

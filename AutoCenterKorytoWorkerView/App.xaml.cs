@@ -32,6 +32,7 @@ namespace AutoCenterKorytoWorkerView
             currentContainer.RegisterType<IPrePurchaseWorkStorage, PrePurchaseWorkStorage>(new HierarchicalLifetimeManager());
             currentContainer.RegisterType<IPurchaseStorage, PurchaseStorage>(new HierarchicalLifetimeManager());
             currentContainer.RegisterType<IWorkerStorage, WorkerStorage>(new HierarchicalLifetimeManager());
+            currentContainer.RegisterType<IReportDataProvider, ReportDataProvider>(new HierarchicalLifetimeManager());
             currentContainer.RegisterType<CarLogic>(new HierarchicalLifetimeManager());
             currentContainer.RegisterType<ClientLogic>(new HierarchicalLifetimeManager());
             currentContainer.RegisterType<ClientWisheLogic>(new HierarchicalLifetimeManager());
@@ -40,6 +41,7 @@ namespace AutoCenterKorytoWorkerView
             currentContainer.RegisterType<PrePurchaseWorkLogic>(new HierarchicalLifetimeManager());
             currentContainer.RegisterType<PurchaseLogic>(new HierarchicalLifetimeManager());
             currentContainer.RegisterType<WorkerLogic>(new HierarchicalLifetimeManager());
+            currentContainer.RegisterType<ReportLogic>(new HierarchicalLifetimeManager());
             return currentContainer;
         }
     }

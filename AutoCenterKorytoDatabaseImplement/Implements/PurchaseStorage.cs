@@ -186,15 +186,18 @@ namespace AutoCenterKorytoDatabaseImplement.Implements
             using (var context = new AutoCenterKorytoDatabase())
             {
                 var cars = context.Cars;
-                var selectedCarsId = purchase.Purchase_Cars.Where(pc => pc.PurchaseId == purchase.Id).Select(pc => pc.CarId);
-                var sum = cars.Where(c => selectedCarsId.Contains(c.Id)).Sum(c => c.Price);
+                var preWorks = context.PrePurchaseWorks;
+
+                var selectedCarsSum = purchase.Purchase_Cars.Where(pc => pc.PurchaseId == purchase.Id).Sum(pc => pc.Car.Price);
+                var selectedPreWorksSum = purchase.Purchase_PrePurchaseWorks.Where(pc => pc.PurchaseId == purchase.Id).Sum(pc => pc.PrePurchaseWorks.Price);
+               
                 return new PurchaseViewModel
                 {
                     ClientId = purchase.ClientId,
                     DateCreate = purchase.DateCreate,
                     DateDelivery = purchase.DateDelivery,
                     Id = purchase.Id,
-                    Price = sum,
+                    Price = selectedCarsSum + selectedPreWorksSum,
                     PrePurchaseWorks = purchase.Purchase_PrePurchaseWorks.ToDictionary(pp => pp.PrePurchaseWorksId, pp => pp.PrePurchaseWorks.Name),
                     Cars = purchase.Purchase_Cars.ToDictionary(pc => pc.CarId, pc => pc.Car.Model),
                 };

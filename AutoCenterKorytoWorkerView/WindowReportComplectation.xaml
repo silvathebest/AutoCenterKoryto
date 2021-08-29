@@ -18,5 +18,17 @@
             <Button Content="в PDF" Width="100" Margin="20" Click="ButtonToPdf_Click"></Button>
             <Button Content="На почту" Width="100" Margin="20" Click="Button_Click"></Button>
         </StackPanel>
+        <Grid>
+            <DataGrid x:Name="dataGridReport" AutoGenerateColumns="True" CanUserReorderColumns="False" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Комплектация" Binding="{Binding Path=ComplectationName}" Width="*"/>
+                    <DataGridTextColumn Header="Описание" Binding="{Binding Path=ComplectationDescription}" Width="*"/>
+                    <DataGridTextColumn Header="Стоимость" Binding="{Binding Path=ComplectationPrice}" Width="*"/>
+                    <DataGridTextColumn Header="Дата заказа" Binding="{Binding Path=DateCreate}" Width="*"/>
+                    <DataGridTextColumn Header="Предпродажная работа" Binding="{Binding Path=PrePurchaseWorkName}" Width="2*"/>
+                    <DataGridTextColumn Header="Предпродажная работа. Дедлайн" Binding="{Binding Path=PrePurchaseWorkDeadline}" Width="2*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
     </StackPanel>
 </Window>
