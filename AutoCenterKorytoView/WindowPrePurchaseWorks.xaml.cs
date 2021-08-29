@@ -1,0 +1,86 @@
+﻿using AutoCenterKorytoBusinessLogic.BindingModels;
+using AutoCenterKorytoBusinessLogic.BusinessLogics;
+using AutoCenterKorytoBusinessLogic.ViewModels;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+using Unity;
+
+namespace AutoCenterKorytoView
+{
+    public partial class WindowPrePurchaseWorks : Window
+    {
+        [Dependency]
+        public IUnityContainer Container { get; set; }
+
+        private PrePurchaseWorkLogic _prePurchaseWorkLogic;
+
+        public WindowPrePurchaseWorks(PrePurchaseWorkLogic prePurchaseWorkLogic)
+        {
+            _prePurchaseWorkLogic = prePurchaseWorkLogic;
+            InitializeComponent();
+            LoadData();
+        }
+
+        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
+        {
+            WindowPrePurchaseWork window = Container.Resolve<WindowPrePurchaseWork>();
+            window.ShowDialog();
+        }
+
+        private void ButtonUpd_Click(object sender, RoutedEventArgs e)
+        {
+            WindowPrePurchaseWork window = Container.Resolve<WindowPrePurchaseWork>();
+          
+            window.PreWorkViewModel = (PrePurchaseWorkViewModel)dataGridPrePurchaseWorks.SelectedItem;
+            window.ShowDialog();
+        }
+
+        private void ButtonDel_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (dataGridPrePurchaseWorks.SelectedItems.Count == 1)
+                {
+                    _prePurchaseWorkLogic.Delete(new PrePurchaseWorkBindingModel { Id = ((PurchaseViewModel)dataGridPrePurchaseWorks.SelectedItem).Id, ClientId = App.Client.Id });
+                }
+                MessageBox.Show("Успешно удалено", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void ButtonRef_Click(object sender, RoutedEventArgs e)
+        {
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            try
+            {
+                var preWorksList = _prePurchaseWorkLogic.Read(null);
+                if (preWorksList != null)
+                {
+                    dataGridPrePurchaseWorks.ItemsSource = preWorksList;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+    }
+}

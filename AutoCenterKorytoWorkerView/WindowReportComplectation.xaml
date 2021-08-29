@@ -1,0 +1,22 @@
+﻿<Window x:Class="AutoCenterKorytoWorkerView.WindowReportComplectation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoCenterKorytoWorkerView"
+        mc:Ignorable="d"
+      Title="Отчет по комплектациям" Height="450" Width="800">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label Content="c" FontSize="14" Margin="10,5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+            <DatePicker x:Name="DatePikerFrom" Height="25" Width="120">
+            </DatePicker>
+            <Label Content="по" FontSize="14" Margin="10,5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+            <DatePicker x:Name="DatePikerTo" Height="25" Width="120">
+            </DatePicker>
+            <Button Content="Сформировать" Width="100" Margin="20" Click="ButtonMake_Click"></Button>
+            <Button Content="в PDF" Width="100" Margin="20" Click="ButtonToPdf_Click"></Button>
+            <Button Content="На почту" Width="100" Margin="20" Click="Button_Click"></Button>
+        </StackPanel>
+    </StackPanel>
+</Window>

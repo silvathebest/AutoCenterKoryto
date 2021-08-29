@@ -1,0 +1,20 @@
+﻿<Window x:Class="AutoCenterKorytoView.WindowRegistration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoCenterKorytoView"
+        mc:Ignorable="d"
+        Title="WindowRegistration" Height="484.5" Width="376.333">
+    <Grid>
+        <Label x:Name="labelName" Content="Имя:" HorizontalAlignment="Left" Margin="45,10,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Margin="48,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="269" FontSize="18"/>
+        <Label x:Name="labelLogin" Content="Логин:" HorizontalAlignment="Left" Margin="48,99,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <TextBox x:Name="textBoxLogin" HorizontalAlignment="Left" Margin="47,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="269" FontSize="18"/>
+        <Label x:Name="labelPassword" Content="Пароль:" HorizontalAlignment="Left" Margin="45,245,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <TextBox x:Name="textBoxPassword" HorizontalAlignment="Left" Margin="45,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" FontSize="18"/>
+        <Label x:Name="labelPhoneNumber" Content="Номер телефона" HorizontalAlignment="Left" Margin="42,170,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <TextBox x:Name="textBoxPhoneNumber" HorizontalAlignment="Left" Margin="45,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" FontSize="18"/>
+        <Button x:Name="button" Content="Зарегистрироваться" Height="34" Margin="42,338,62,0" VerticalAlignment="Top" Background="#00DDDDDD" Click="button_Click"/>
+    </Grid>
+</Window>

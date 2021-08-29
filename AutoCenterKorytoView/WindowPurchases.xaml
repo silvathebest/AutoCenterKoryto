@@ -1,0 +1,32 @@
+﻿<Window x:Class="AutoCenterKorytoView.WindowPurchases"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoCenterKorytoView"
+        mc:Ignorable="d"
+       Title="Покупки" Height="378.322" Width="858.033" ResizeMode="NoResize" Loaded="Window_Loaded">
+    <Grid Height="348" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="dataGridPurchases" Grid.Column="0" AutoGenerateColumns="False" CanUserAddRows="false" Height="348" VerticalAlignment="Top" Margin="0,0,0,-32">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер заказа" Binding="{Binding Path=Id}" Width="1*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Итоговая сумма" Binding="{Binding Path=Price}" Width="1*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Дата создания" Binding="{Binding Path=DateCreate}" Width="1*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Дата завершения" Binding="{Binding Path=DateDelivery}" Width="1*"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Grid.Column="1" VerticalAlignment="Top">
+            <Button x:Name="ButtonAdd" Content="Создать" Margin="20,20,0,20" Click="ButtonAdd_Click" HorizontalAlignment="Left" Width="128"></Button>
+            <Button x:Name="ButtonUpd" Content="Изменить" Margin="20,20,0,20" Click="ButtonUpd_Click" HorizontalAlignment="Left" Width="128"></Button>
+            <Button x:Name="ButtonDel" Content="Удалить" Margin="20,20,0,20" Click="ButtonDel_Click" HorizontalAlignment="Left" Width="128"/>
+            <Button x:Name="ButtonRef" Content="Обновить" Margin="20,20,0,20" Click="ButtonRef_Click" HorizontalAlignment="Left" Width="128"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
