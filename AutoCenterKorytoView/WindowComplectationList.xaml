@@ -12,7 +12,6 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="№ покупки" Binding="{Binding Path=Id}" Width="0.2*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Дата формирования" Binding="{Binding Path=DateCreate}" Width="0.4*"></DataGridTextColumn>
-                <DataGridTextColumn Header="дата выдачи" Binding="{Binding Path=DateDelivery}" Width="0.4*"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10,5">

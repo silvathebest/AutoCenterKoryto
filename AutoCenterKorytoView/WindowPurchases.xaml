@@ -19,7 +19,6 @@
                 <DataGridTextColumn Header="Номер заказа" Binding="{Binding Path=Id}" Width="1*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Итоговая сумма" Binding="{Binding Path=Price}" Width="1*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Дата создания" Binding="{Binding Path=DateCreate}" Width="1*"></DataGridTextColumn>
-                <DataGridTextColumn Header="Дата завершения" Binding="{Binding Path=DateDelivery}" Width="1*"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Grid.Column="1" VerticalAlignment="Top">

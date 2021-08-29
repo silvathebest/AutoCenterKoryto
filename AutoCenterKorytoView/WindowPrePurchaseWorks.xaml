@@ -20,6 +20,7 @@
                 <DataGridTextColumn Header="Тип" Binding="{Binding Path=Type}" Width="0.4*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Название" Binding="{Binding Path=Name}" Width="0.6*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Срок выполнения" Binding="{Binding Path=DeadlineTime}" Width="0.4*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Цена" Binding="{Binding Path=Price}" Width="0.23*"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Grid.Column="1" VerticalAlignment="Top">

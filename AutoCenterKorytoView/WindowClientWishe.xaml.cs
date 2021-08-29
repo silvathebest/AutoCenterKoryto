@@ -41,7 +41,7 @@ namespace AutoCenterKorytoView
             {
                 _clientWisheLogic.CreateOrUpdate(new ClientWisheBindingModel
                 {
-                    TotalPrice = Convert.ToDouble(textBoxPrice.Text),
+
                     Note = textBoxNote.Text,
                     ClientId = App.Client.Id,
                     Id = ClientWisheViewModel?.Id,
@@ -74,7 +74,6 @@ namespace AutoCenterKorytoView
             if (ClientWisheViewModel != null)
             {
                 textBoxNote.Text = ClientWisheViewModel.Note;
-                textBoxPrice.Text = ClientWisheViewModel.TotalPrice.ToString();
                 comboBoxPrePurchaseWorks.SelectedItem = list?.FirstOrDefault(pp => pp.Id == ClientWisheViewModel.PrePurchaseWorkId);
             }
         }

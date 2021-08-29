@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoCenterKorytoView"
         mc:Ignorable="d"
-        Title="WindowRegistration" Height="484.5" Width="376.333">
+        Title="Регистрация" Height="484.5" Width="376.333">
     <Grid>
         <Label x:Name="labelName" Content="Имя:" HorizontalAlignment="Left" Margin="45,10,0,0" VerticalAlignment="Top" FontSize="22"/>
         <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Margin="48,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="269" FontSize="18"/>

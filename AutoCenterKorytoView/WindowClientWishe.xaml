@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoCenterKorytoView"
         mc:Ignorable="d"
-        Title="Формирование пожелания клиента" Height="344.811" Width="516.712" ResizeMode="NoResize" Loaded="Window_Loaded">
-    <StackPanel VerticalAlignment="Bottom" Height="306">
+        Title="Формирование пожелания клиента" Height="171.464" Width="516.712" ResizeMode="NoResize" Loaded="Window_Loaded">
+    <StackPanel Margin="0,8,0,-2">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -22,8 +22,6 @@
             <ComboBox x:Name="comboBoxPrePurchaseWorks" Grid.Row="1" Grid.Column="1" FontSize="14" Margin="5" DisplayMemberPath="Name"/>
             <Label Grid.Row="2" Content="Примечание" FontSize="14" Margin="10,5"/>
             <TextBox x:Name="textBoxNote" Grid.Row="2" Grid.Column="2" FontSize="20" Margin="5,5,5,0" VerticalAlignment="Top" TextWrapping="Wrap" AcceptsReturn="True"/>
-            <Label Grid.Row="3" Content="Цена" FontSize="14" Margin="10,5"/>
-            <TextBox x:Name="textBoxPrice" Grid.Row="3" Grid.Column="2" FontSize="20" Margin="5"/>
         </Grid>
         <StackPanel Orientation="Horizontal" Margin="244,0,0,0">
             <Button x:Name="ButtonAdd" Content="Сохранить" Width="80" Margin="10" Click="ButtonAdd_Click"/>
