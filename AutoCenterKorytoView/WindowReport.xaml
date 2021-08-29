@@ -16,7 +16,19 @@
             </DatePicker>
             <Button x:Name="ButtonMake" Content="Сформировать" Width="100" Margin="20" Click="ButtonMake_Click"></Button>
             <Button x:Name="ButtonToPdf" Content="в PDF" Width="100" Margin="20" Click="ButtonToPdf_Click"></Button>
-            <Button Content="На почту" Width="100" Margin="20"></Button>
+            <Button x:Name="ButtonToMail" Content="На почту" Width="100" Margin="20" Click="ButtonToMail_Click"></Button>
         </StackPanel>
+        <Grid>
+            <DataGrid x:Name="dataGridReport" AutoGenerateColumns="False" CanUserReorderColumns="False" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Номер заказа" Binding="{Binding Path=Id}" Width="*"/>
+                    <DataGridTextColumn Header="Дата создания заказа" Binding="{Binding Path=DateCreate}" Width="1.5*"/>
+                    <DataGridTextColumn Header="Комплектация" Binding="{Binding Path=ComplectationName}" Width="1.5*"/>
+                    <DataGridTextColumn Header="Описание" Binding="{Binding Path=ComplectationDescription}" Width="2*"/>
+                    <DataGridTextColumn Header="Стоимость" Binding="{Binding Path=ComplectationPrice}" Width="*"/>
+                    <DataGridTextColumn Header="Предпродажная работа" Binding="{Binding Path=PrePurchaseWorkName}" Width="2*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
     </StackPanel>
 </Window>

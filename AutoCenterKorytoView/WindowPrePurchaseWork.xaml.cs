@@ -18,9 +18,6 @@ using Unity;
 
 namespace AutoCenterKorytoView
 {
-    /// <summary>
-    /// Логика взаимодействия для WindowPrePurchaseWork.xaml
-    /// </summary>
     public partial class WindowPrePurchaseWork : Window
     {
         [Dependency]
@@ -31,8 +28,9 @@ namespace AutoCenterKorytoView
 
         public WindowPrePurchaseWork(PrePurchaseWorkLogic prePurchaseWorkLogic)
         {
-            _prePurchaseWorkLogic = prePurchaseWorkLogic;
             InitializeComponent();
+            _prePurchaseWorkLogic = prePurchaseWorkLogic;
+
         }
 
         private void ButtonSave_Click(object sender, RoutedEventArgs e)
@@ -42,6 +40,7 @@ namespace AutoCenterKorytoView
             {
                 _prePurchaseWorkLogic.CreateOrUpdate(new PrePurchaseWorkBindingModel
                 {
+                    Price = Convert.ToDouble(textBoxPrice.Text),
                     Type = textBoxType.Text,
                     Name = textBoxName.Text,
                     ClientId = App.Client.Id,

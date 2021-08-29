@@ -11,8 +11,6 @@ namespace AutoCenterKorytoDatabaseImplement.Models
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
-        [Required]
-        public double Price { get; set; }
         public int ClientId { get; set; }
         public virtual Client Client { get; set; }
         public int PrePurchaseWorksId { get; set; }

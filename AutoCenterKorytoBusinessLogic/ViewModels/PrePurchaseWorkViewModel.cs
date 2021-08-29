@@ -14,8 +14,8 @@ namespace AutoCenterKorytoBusinessLogic.ViewModels
         public string Name { get; set; }
         [DisplayName("Срок выполнения")]
         public string DeadlineTime { get; set; }
-       // [DisplayName("Цена")]
-       // public double Price { get; set; } // Нет в бд
+        [DisplayName("Цена")]
+        public double Price { get; set; } 
         public int ClientId { get; set; }
     }
 }

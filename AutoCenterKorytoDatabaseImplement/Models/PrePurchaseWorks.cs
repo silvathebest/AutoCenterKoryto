@@ -14,6 +14,7 @@ namespace AutoCenterKorytoDatabaseImplement.Models
         [Required]
         public string Name { get; set; }
         public string DeadlineDate { get; set; }
+        public double Price { get; set; }
 
         public int ClientId { get; set; }
         public virtual Client Client { get; set; }

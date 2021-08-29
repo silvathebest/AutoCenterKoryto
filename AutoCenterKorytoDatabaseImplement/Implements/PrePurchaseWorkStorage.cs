@@ -95,7 +95,8 @@ namespace AutoCenterKorytoDatabaseImplement.Implements
                 DeadlineTime = work.DeadlineDate,
                 Id = work.Id,
                 Name = work.Name,
-                Type = work.Type
+                Type = work.Type,
+                Price = work.Price
             };
         }
 
@@ -105,6 +106,7 @@ namespace AutoCenterKorytoDatabaseImplement.Implements
             work.Name = model.Name;
             work.ClientId = model.ClientId;
             work.DeadlineDate = model.DeadlineTime;
+            work.Price = model.Price;
             return work;
         }
     }
