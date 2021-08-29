@@ -100,7 +100,7 @@ namespace AutoCenterKorytoBusinessLogic.BusinessLogics
             SaveToPdf.ComplectationsDinamic(new PdfInfo
             {
                 FileName = model.FileName,
-                Title = "Отчет по движению комплектаций за периуд",
+                Title = "Отчет по движению комплектаций за период",
                 DateFrom = model.DateFrom.Value,
                 DateTo = model.DateTo.Value,
                 DataForReport = ReportOnComplectationsDinamic(model)

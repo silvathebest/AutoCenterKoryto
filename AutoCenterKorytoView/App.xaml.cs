@@ -1,7 +1,11 @@
-﻿using AutoCenterKorytoBusinessLogic.BusinessLogics;
+﻿using AutoCenterKorytoBusinessLogic.BusinessLogic;
+using AutoCenterKorytoBusinessLogic.BusinessLogics;
+using AutoCenterKorytoBusinessLogic.HelperModels;
 using AutoCenterKorytoBusinessLogic.Interfaces;
 using AutoCenterKorytoBusinessLogic.ViewModels;
 using AutoCenterKorytoDatabaseImplement.Implements;
+using System;
+using System.Configuration;
 using System.Windows;
 using Unity;
 using Unity.Lifetime;
@@ -15,6 +19,14 @@ namespace AutoCenterKorytoView
         {
             base.OnStartup(e);
             var container = BuildUnityContainer();
+            MailLogic.MailConfig(new MailConfig
+            {
+                SmtpClientHost = ConfigurationManager.AppSettings["SmtpClientHost"],
+                SmtpClientPort = Convert.ToInt32(ConfigurationManager.AppSettings["SmtpClientPort"]),
+                MailLogin = ConfigurationManager.AppSettings["MailLogin"],
+                MailPassword = ConfigurationManager.AppSettings["MailPassword"],
+                MailName = ConfigurationManager.AppSettings["MailName"]
+            });
             var authWindow = container.Resolve<WindowLogin>();
             authWindow.ShowDialog();
         }

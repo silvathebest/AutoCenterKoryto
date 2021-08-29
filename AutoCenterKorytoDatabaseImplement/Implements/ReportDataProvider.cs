@@ -14,7 +14,7 @@ namespace AutoCenterKorytoDatabaseImplement.Implements
         public List<ReportViewModel> ReportOnComplectationsByPeriod(ReportBindingModel model)
         {
             if (model.DateFrom.HasValue == false || model.DateTo.HasValue == false || model.DateTo < model.DateFrom)
-                throw new Exception("Периуд для формирования отчета не указан или указан неверно");
+                throw new Exception("Период для формирования отчета не указан или указан неверно");
 
             using(var context = new AutoCenterKorytoDatabase())
             {
@@ -78,7 +78,7 @@ namespace AutoCenterKorytoDatabaseImplement.Implements
         public List<ReportViewModel> ReportOnComplectationsDinamic(ReportBindingModel model)
         {
             if (model.DateFrom.HasValue == false || model.DateTo.HasValue == false || model.DateTo < model.DateFrom)
-                throw new Exception("Периуд для формирования отчета не указан или указан неверно");
+                throw new Exception("Период для формирования отчета не указан или указан неверно");
 
             using (var context = new AutoCenterKorytoDatabase())
             {

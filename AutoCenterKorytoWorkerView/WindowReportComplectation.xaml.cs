@@ -95,7 +95,7 @@ namespace AutoCenterKorytoWorkerView
                     MailAddress = App.Worker.Login,
                     Subject = "Отчет",
                     Text = "Отчет от " + DatePikerFrom.SelectedDate.Value.ToShortDateString() + " по " + DatePikerTo.SelectedDate.Value.ToShortDateString(),
-                    FileName = fileName
+                    FileName = fileName,
                 });
                 System.Windows.Forms.MessageBox.Show("Выполнено", "Уведомление", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
