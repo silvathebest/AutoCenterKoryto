@@ -45,6 +45,11 @@ namespace AutoCenterKorytoView
                 MessageBox.Show("Заполните поле \"пароль\"", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
+            if(textBoxPassword.Text.Length > 15 || textBoxPassword.Text.Length < 5)
+            {
+                MessageBox.Show("Длина пароля должна быть от 5 до 15 \"пароль\"", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
             try
             {
                 logic.CreateOrUpdate(new ClientBindingModel

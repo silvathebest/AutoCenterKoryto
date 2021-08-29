@@ -55,7 +55,7 @@ namespace AutoCenterKorytoDatabaseImplement.Implements
             using (var context = new AutoCenterKorytoDatabase())
             {
                 var client = context.Clients
-                .FirstOrDefault(rec => rec.Id == model.Id);
+                .FirstOrDefault(rec => rec.Login == model.Login || rec.Id == model.Id);
                 return client != null ?
                 new ClientViewModel
                 {

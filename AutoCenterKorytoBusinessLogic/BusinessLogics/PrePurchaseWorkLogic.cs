@@ -49,7 +49,7 @@ namespace AutoCenterKorytoBusinessLogic.BusinessLogics
         {
             var prePurchaseWork = _prePurchaseWorkStorage.GetElement(new PrePurchaseWorkBindingModel
             {
-                Id = model.Id,
+                Id = model.Id
             });
             if (prePurchaseWork == null)
             {

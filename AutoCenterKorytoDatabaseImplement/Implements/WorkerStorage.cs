@@ -55,7 +55,7 @@ namespace AutoCenterKorytoDatabaseImplement.Implements
             using (var context = new AutoCenterKorytoDatabase())
             {
                 var worker = context.Workers
-                .FirstOrDefault(rec => rec.Id == model.Id);
+                .FirstOrDefault(rec => rec.Login == model.Login || rec.Id == model.Id);
                 return worker != null ?
                 new WorkerViewModel
                 {

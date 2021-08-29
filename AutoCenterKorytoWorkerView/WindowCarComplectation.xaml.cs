@@ -42,6 +42,12 @@ namespace AutoCenterKorytoWorkerView
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             comboBoxComplectations.ItemsSource = AvalibleComplectations;
+            if (AvalibleComplectations.Count == 0)
+            {
+                ButtonAdd.IsEnabled = false;
+                return;
+            }
+               
             if (SelectedComplectation == null)
                 comboBoxComplectations.SelectedItem = AvalibleComplectations?[0];
             else

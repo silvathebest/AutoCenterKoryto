@@ -24,6 +24,7 @@ namespace AutoCenterKorytoView
         {
             WindowPurchase window = Container.Resolve<WindowPurchase>();
             window.ShowDialog();
+            LoadData();
         }
 
         private void ButtonUpd_Click(object sender, RoutedEventArgs e)
@@ -31,6 +32,7 @@ namespace AutoCenterKorytoView
             WindowPurchase window = Container.Resolve<WindowPurchase>();
             window.Purchase = (PurchaseViewModel)dataGridPurchases.SelectedItem;
             window.ShowDialog();
+            LoadData();
         }
 
         private void ButtonDel_Click(object sender, RoutedEventArgs e)
@@ -47,6 +49,7 @@ namespace AutoCenterKorytoView
             {
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+            LoadData();
         }
 
         private void ButtonRef_Click(object sender, RoutedEventArgs e)

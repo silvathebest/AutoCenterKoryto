@@ -39,6 +39,7 @@ namespace AutoCenterKorytoView
         {
             WindowClientWishe window = Container.Resolve<WindowClientWishe>();
             window.ShowDialog();
+            LoadData();
         }
 
         private void ButtonUpd_Click(object sender, RoutedEventArgs e)
@@ -46,6 +47,7 @@ namespace AutoCenterKorytoView
             WindowClientWishe window = Container.Resolve<WindowClientWishe>();
             window.ClientWisheViewModel = (ClientWisheViewModel)dataGridClientWishes.SelectedItem;
             window.ShowDialog();
+            LoadData();
         }
 
         private void ButtonDel_Click(object sender, RoutedEventArgs e)
@@ -63,6 +65,7 @@ namespace AutoCenterKorytoView
             {
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+            LoadData();
         }
 
         private void ButtonRef_Click(object sender, RoutedEventArgs e)

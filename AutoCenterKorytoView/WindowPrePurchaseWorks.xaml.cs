@@ -25,6 +25,7 @@ namespace AutoCenterKorytoView
         {
             WindowPrePurchaseWork window = Container.Resolve<WindowPrePurchaseWork>();
             window.ShowDialog();
+            LoadData();
         }
 
         private void ButtonUpd_Click(object sender, RoutedEventArgs e)
@@ -33,6 +34,7 @@ namespace AutoCenterKorytoView
           
             window.PreWorkViewModel = (PrePurchaseWorkViewModel)dataGridPrePurchaseWorks.SelectedItem;
             window.ShowDialog();
+            LoadData();
         }
 
         private void ButtonDel_Click(object sender, RoutedEventArgs e)
@@ -49,6 +51,7 @@ namespace AutoCenterKorytoView
             {
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+            LoadData();
         }
 
         private void ButtonRef_Click(object sender, RoutedEventArgs e)
