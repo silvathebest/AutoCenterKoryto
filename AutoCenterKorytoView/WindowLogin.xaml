@@ -13,7 +13,7 @@
         </Grid.ColumnDefinitions>
         <Canvas Height="419" VerticalAlignment="Top">
             <Label x:Name="labelLogin" Content="Логин:" Canvas.Left="101" Canvas.Top="64" FontSize="22"/>
-            <TextBox x:Name="textBoxLogin" Text="skaynzhin@gmail.com" Canvas.Left="101" TextWrapping="Wrap" Canvas.Top="108" Width="191" FontSize="18"/>
+            <TextBox x:Name="textBoxLogin" Text="skyanzhin@gmail.com" Canvas.Left="101" TextWrapping="Wrap" Canvas.Top="108" Width="191" FontSize="18"/>
             <Label x:Name="labelPassword" Content="Пароль:" Canvas.Left="101" Canvas.Top="162" FontSize="22"/>
             <PasswordBox x:Name="passwordBox" Height="25" Canvas.Left="101" Canvas.Top="223" Width="191"/>
             <Button x:Name="buttonLogin" Content="Войти" Height="44" Canvas.Left="100" Canvas.Top="266" Width="192" Background="#00DDDDDD" Click="buttonLogin_Click"/>

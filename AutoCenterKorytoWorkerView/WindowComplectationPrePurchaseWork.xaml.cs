@@ -43,7 +43,7 @@ namespace AutoCenterKorytoWorkerView
 
         private void ButtonSave_Click(object sender, RoutedEventArgs e)
         {
-            if(_currentComplectation == null)
+            if (_currentComplectation == null)
             {
                 MessageBox.Show("Не выбрана комплектация");
                 return;
@@ -71,12 +71,14 @@ namespace AutoCenterKorytoWorkerView
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
+            if (dataGridAvaliblePreWorks.SelectedItem == null) return;
             _selectedWorks.Add((PrePurchaseWorkViewModel)dataGridAvaliblePreWorks.SelectedItem);
             dataGridSelectedPreWorks.Items.Refresh();
         }
 
         private void ButtonDel_Click(object sender, RoutedEventArgs e)
         {
+            if (dataGridSelectedPreWorks.SelectedItem == null) return;
             _selectedWorks.Remove((PrePurchaseWorkViewModel)dataGridSelectedPreWorks.SelectedItem);
             dataGridSelectedPreWorks.Items.Refresh();
         }

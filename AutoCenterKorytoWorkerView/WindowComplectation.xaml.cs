@@ -9,7 +9,7 @@ namespace AutoCenterKorytoWorkerView
 {
     public partial class WindowComplectation : Window
     {
-        private ComplectationLogic _complectationLogic; 
+        private ComplectationLogic _complectationLogic;
         public ComplectationViewModel Complectation { get; set; }
 
         public WindowComplectation(ComplectationLogic complectationLogic)
@@ -28,7 +28,8 @@ namespace AutoCenterKorytoWorkerView
                     Name = textBoxName.Text,
                     Price = Convert.ToDouble(textBoxPrice.Text),
                     WorkerId = App.Worker.Id,
-                    Id = Complectation?.Id
+                    Id = Complectation?.Id,
+                    PrePurcahseWorksIds = Complectation.PrePurchaseWorksIds
                 });
                 MessageBox.Show("Успех");
                 Close();
@@ -46,7 +47,7 @@ namespace AutoCenterKorytoWorkerView
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            if(Complectation != null)
+            if (Complectation != null)
             {
                 textBoxDescription.Text = Complectation.Description;
                 textBoxName.Text = Complectation.Name;
